@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+</head>
+
+<body>
+    <h1>文件上传</h1>
+    <script src="jquery/jquery.min.js"></script>
+    <script type="text/jscript">
+        $(function () {
+            $("#btn_uploadimg").click(function () {
+                var fileObj = document.getElementById("FileUpload").files[0]; // js 获取文件对象
+                if (typeof (fileObj) == "undefined" || fileObj.size <= 0) {
+                    alert("请选择图片");
+                    return;
+                }
+                var formFile = new FormData();
+                formFile.append("action", "UploadVMKImagePath");  
+                formFile.append("file", fileObj); //加入文件对象
+
+                var data = formFile;
+                $.ajax({
+                    url: "upload_image.php",
+                    data: data,
+                    type: "Post",
+                    dataType: "json",
+                    cache: false,//上传文件无需缓存
+                    processData: false,//用于对data参数进行序列化处理 这里必须false
+                    contentType: false, //必须
+                    success: function (result) {
+                        alert(result.link)
+                    },
+                })
+            })
+        })
+  
+    </script>
+    <!--enctype 属性规定在发送到服务器之前应该如何对表单数据进行编码,"multipart/form-data"在使用包含文件上传控件的表单时，必须使用该值。-->
+    <!-- <form> -->
+    <!--file定义输入字段和 "浏览"按钮，供文件上传。-->
+    <div>
+        <input type="file" name="FileUpload" id="FileUpload">
+        <a class="layui-btn layui-btn-mini" id="btn_uploadimg">上传图片</a>
+    </div>
+    <!-- </form> -->
+</body>
+<script type="text/javascript">
+
+
+
+</script>
+
+</html>
