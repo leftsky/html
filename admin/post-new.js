@@ -63,6 +63,7 @@ function update_post(id, artId, artTypeNo) {
     artStr2 = $('#' + id + '2').val()
     post_author = document.getElementById('post_author').value
     post_title = document.getElementById('post_title').value
+    main_url = urls
     post_mime_type = document.getElementById('termTag') 
                 ? document.getElementById('termTag').value : artTypeNo
 
@@ -72,6 +73,7 @@ function update_post(id, artId, artTypeNo) {
 
     var postJ = {
         artId: artId,
+        main_url: main_url,
         post_author: post_author,
         post_date: '',
         post_content: artStr,
