@@ -31,10 +31,10 @@
         <div class="right">
             <span class="text">匠心筑梦，继往开来</span>
             <div class="search-box">
-                <form>
-                    <input class="search-input" type="text" name="search" placeholder="搜索关键词">
+                <form action="search.php">
+                    <input class="search-input" type="text" name="scStr" placeholder="搜索关键词">
 
-                    <button type="submit" class="icon-search"><img src="images/icon-search.png"></button>
+                    <button class="icon-search"><img src="images/icon-search.png"></button>
                 </form>
             </div>
         </div>
