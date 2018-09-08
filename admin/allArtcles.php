@@ -104,10 +104,10 @@ $num = count($arr);
                                     <tbody>
                                     <?php
                                     for ($i = 0; $i < $num; ++$i) {
-                                        if ($num == 1 || $num == 1)
+                                        if ($num == 0)
                                             break;
                                         ?>
-                                        <tr>
+                                        <tr id="delId<?php echo $arr[$i]['id'] ?>">
                                             <td><?php echo $arr[$i]['id'] ?></td>
                                             <td><?php echo $arr[$i]['post_title'] ?></td>
                                             <td><a href="readArtcle.php?artcleId=<?php
@@ -118,8 +118,10 @@ $num = count($arr);
                                             <?php
                                             if ($term != -1) {
                                                 ?>
-                                                <td><a href="javascript:delArtcleById(<?php
-                                                    echo $arr[$i]['id'] ?>,'tagsShow')" )>删除</a></td>
+                                                <td>
+                                                    <a href="javascript:delArtcleById(<?php
+                                                    echo $arr[$i]['id'] ?>,'delId<?php
+                                                    echo $arr[$i]['id'] ?>')" )>删除</a></td>
                                                 <?php
                                             }
                                             ?>
