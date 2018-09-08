@@ -6,28 +6,17 @@ error_reporting(E_ALL ^ E_WARNING);
 
 $id = $_GET['artcleId'];
 if ($id) {
-    $mysqli = new mysqli('huadong.leftsky.top', 'zyjx', 'zyjx', 'zyjx', 3306);
 
-    if (!$mysqli) {
-        die('Could not connect: ' . mysql_error());
-    }
-    $mysqli->query("SET NAMES utf8");
-    if ($mysqli->connect_error) {
-        //echo 'mysqli: ';
-        die('Connect Error (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
-    }
+    require_once('mysqlcon.php');
+    $mysqli = $mysqlcon;
 
-    if (mysqli_connect_error()) {
-        //echo 'mysql_connect_error(): ';
-        die('Connect Error (' . mysqli_connect_errno() . ') ' . mysqli_connect_error());
-    }
-
-    $sqlStr = "SELECT post_content,post_author,post_title,post_mime_type FROM posts WHERE id=" . $id;
+    $sqlStr = "SELECT * FROM posts WHERE id=" . $id;
     // echo $sqlStr;
     $query = $mysqli->query($sqlStr);
     $arr = $query->fetch_array();
     // echo $arr['post_content'];
     $artContent = $arr['post_content'];
+    $artContent2 = $arr['post_excerpt'];
     $artAuthor = $arr['post_author'];
     $artTitle = $arr['post_title'];
     $artUrl = $arr['post_main_url'];
@@ -159,6 +148,13 @@ if ($id) {
     <div style="float: right">
         <a id="modal-946603" href="#modal-container-946603" role="button" class="btn"
            data-toggle="modal"><?php echo $artButton ?></a>
+           <script>
+               function clearImage() {
+                   urls = ""
+                   document.getElementById("imagesPreSHow").innerHTML = ""
+               }
+           </script>
+        <button onclick="clearImage()" role="button" class="btn" >清空图片组</button>
     </div>
 
     <div class="modal fade" id="modal-container-946603" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -208,6 +204,7 @@ if ($id) {
 <div>
     <a class="layui-btn layui-btn-mini" id="btn_uploadimg" style="float: left">上传新文件</a>
     <input type="file" name="FileUpload" id="FileUpload">
+    <!-- <a class="layui-btn layui-btn-mini" id="btn_uploadimg" style="float: left">重置图片组</a> -->
 </div>
 
 <!-- <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -221,6 +218,17 @@ if ($id) {
     <div class="swiper-container pro-container swiper-container-horizontal">
         <div id="imagesPreSHow" class="swiper-wrapper pro-wrapper"
              style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+            <?php
+            $urls = explode(";", $artUrl);
+            $num = count($urls);
+            for ($i = 0; $i < $num; ++$i) {
+                ?>
+                <div class="swiper-slide swiper-slide-prev" style="width: 76px; margin-right: 5px;">
+                    <img src="<?php echo $urls[$i] ?>">
+                </div>
+                <?php
+            }
+            ?>
             <!-- <div class="swiper-slide swiper-slide-prev" style="width: 76px; margin-right: 5px;">
                 <img src="../images/img-index-product.jpg">
             </div> -->
@@ -229,6 +237,7 @@ if ($id) {
         <div class="swiper-button-next"></div> -->
         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
 </div>
+
 <script src="../js/jquery.min.js"></script>
 <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
@@ -292,6 +301,8 @@ if ($id) {
                 })
             })
         })
+
+
 
 
 </script>

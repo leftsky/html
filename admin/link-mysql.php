@@ -9,23 +9,8 @@
         private $mysqli = null;
 
         public function __construct() {
-            // echo 'hello mysql';
-            $this->mysqli = new mysqli('huadong.leftsky.top', 'zyjx', 'zyjx', 'zyjx', 3306);
-
-            if (!$this->mysqli) {
-                die('Could not connect: ' . mysql_error());
-            }
-            $this->mysqli->query("SET NAMES utf8");
-            if ($this->mysqli->connect_error) {
-                //echo 'mysqli: ';
-                die('Connect Error (' . $this->mysqli->connect_errno . ') ' . $this->mysqli->connect_error);
-            }
-
-            if (mysqli_connect_error()) {
-                //echo 'mysql_connect_error(): ';
-                die('Connect Error (' . mysqli_connect_errno() . ') ' . mysqli_connect_error());
-            }
-
+            require_once('mysqlcon.php');
+            $this->mysqli = $mysqlcon;
         }
 
         public function insert_one_post($postJ){

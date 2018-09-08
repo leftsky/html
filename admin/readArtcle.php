@@ -10,21 +10,9 @@
         $id = $artId;
     }
     if($id) {
-        $mysqli = new mysqli('huadong.leftsky.top', 'zyjx', 'zyjx', 'zyjx', 3306);
 
-        if (!$mysqli) {
-            die('Could not connect: ' . mysql_error());
-        }
-        $mysqli->query("SET NAMES utf8");
-        if ($mysqli->connect_error) {
-            //echo 'mysqli: ';
-            die('Connect Error (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
-        }
-
-        if (mysqli_connect_error()) {
-            //echo 'mysql_connect_error(): ';
-            die('Connect Error (' . mysqli_connect_errno() . ') ' . mysqli_connect_error());
-        }
+        require_once('mysqlcon.php');
+        $mysqli = $mysqlcon;
 
         $sqlStr = "SELECT post_content FROM posts WHERE id=" . $id;
         // echo $sqlStr;

@@ -6,21 +6,9 @@ error_reporting(E_ALL ^ E_WARNING);
 
 $id = $_GET['artcleId'];
 if ($id) {
-    $mysqli = new mysqli('huadong.leftsky.top', 'zyjx', 'zyjx', 'zyjx', 3306);
 
-    if (!$mysqli) {
-        die('Could not connect: ' . mysql_error());
-    }
-    $mysqli->query("SET NAMES utf8");
-    if ($mysqli->connect_error) {
-        //echo 'mysqli: ';
-        die('Connect Error (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
-    }
-
-    if (mysqli_connect_error()) {
-        //echo 'mysql_connect_error(): ';
-        die('Connect Error (' . mysqli_connect_errno() . ') ' . mysqli_connect_error());
-    }
+    require_once('mysqlcon.php');
+    $mysqli = $mysqlcon;
 
     $sqlStr = "SELECT post_content,post_author,post_title,post_mime_type FROM posts WHERE id=" . $id;
     // echo $sqlStr;
@@ -30,22 +18,20 @@ if ($id) {
     $artContent = $arr['post_content'];
     $artAuthor = $arr['post_author'];
     $artTitle = $arr['post_title'];
-    $artUrl = $arr['post_main_url'];
     $artTypeNo = $arr['post_mime_type'];
 
-    $sqlStr = "SELECT tagName FROM term WHERE id=" . $artTypeNo;
-    $query = $mysqli->query($sqlStr);
-    $arr = $query->fetch_array();
-    $artTypeName = $arr['tagName'];
+    // $sqlStr = "SELECT * FROM term WHERE id=" . $artTypeNo;
+    // $query = $mysqli->query($sqlStr);
+    // $arr = $query->fetch_array();
+    // $artTypeName = $arr['tagName'];
     $artButton = "提交文章修改";
     $funName = "update_post";
 } else {
     $artContent = "<h1>文章内标题</h1><p>文章内容</p>";
     $artAuthor = "";
     $artTitle = "";
-    $artUrl = "";
     $artTypeNo = "";
-    $artTypeName = "请选择类别";
+    // $artTypeName = "请选择类别";
     $artButton = "提交文章";
     $funName = "post_new";
 }
@@ -164,10 +150,10 @@ if ($id) {
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <div id='selectDiv'></div>
+                    <!-- <div id='selectDiv'></div>
                     <script>
-                        getSelect('selectDiv', '<?php echo $artTypeName?>', '<?php echo $artTypeNo?>')
-                    </script>
+                        getSelect('selectDiv', '<?php //echo $artTypeName?>', '<?php //echo $artTypeNo?>')
+                    </script> -->
                     <div class="control-group">
                         <label class="control-label" for="post_author">作者</label>
                         <div class="controls">
@@ -190,6 +176,8 @@ if ($id) {
                             if ($_GET['artcleId']) {
                                 echo ',';
                                 echo $_GET['artcleId'];
+                                echo ',';
+                                echo $artTypeNo;
                             }
                             ?>)" data-dismiss="modal">确认
                     </button>
@@ -221,6 +209,7 @@ if ($id) {
 <script type="text/javascript" src="froala_editornew/js/languages/zh_cn.js"></script>
 
 <script>
+    urls = ""
     $(function () {
         $('#edit')
         // .on('froalaEditor.initialized', function (e, editor) {

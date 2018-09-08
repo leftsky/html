@@ -1,5 +1,3 @@
-
-
 <html>
 
 <head>
@@ -15,13 +13,14 @@
     <!-- Custom styles for this template -->
     <link href="css/non-responsive.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
     <link href="css/global.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
@@ -56,7 +55,7 @@
                 <li class="first active">
                     <a href="index.php">首页</a>
                 </li>
-                <?php require_once('navbar.php');?>
+                <?php require_once('navbar.php'); ?>
             </ul>
         </div>
         <!--/.nav-collapse -->
@@ -142,7 +141,7 @@
     </div>
     <div class="container index-products">
         <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
+        <!-- <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">机架机座产品</a>
             </li>
             <li role="presentation" class=""><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">机柜机箱产品</a>
@@ -151,121 +150,62 @@
             </li>
             <li role="presentation" class=""><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">非标其他产品</a>
             </li>
-        </ul>
+        </ul> -->
         <!-- Tab panes -->
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="home">
                 <div class="pro-list">
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
+                    <?php
+                    ini_set("display_errors", 0);
+                    error_reporting(E_ALL ^ E_NOTICE);
+                    error_reporting(E_ALL ^ E_WARNING);
+                    $page = $_GET['page'];
+                    $termNo = $_GET['termNo'];
+                    $page = !$page || $page < 1 ? 1 : $page;
+                    if ($termNo) {
+                        $sqlStr = "SELECT * FROM posts WHERE post_status=2 AND post_mime_type=" . $termNo;
+                    } else {
+                        $sqlStr = "SELECT * FROM posts WHERE post_status=2";
+                    }
+                    $query = $mysqli->query($sqlStr);
+                    $user_arr = "";
+                    while ($row = $query->fetch_object()) {
+                        $user_arr[] = $row;
+                    }
+                    $arr = json_decode(json_encode($user_arr, JSON_UNESCAPED_UNICODE), true);
+                    $num = count($arr);
+                    for ($i = ($page - 1) * 8; $i < $num && $i < $page * 8; ++$i) {
+                        if ($arr[$i]['post_title'] == "")
+                            break;
+                        $urls = explode(";", $arr[$i]['post_main_url']);
+                        ?>
+                        <div class="item">
+                            <div class="box">
+                                <a class="pro-name" href="pro-detail.php?id=<?php
+                                echo $arr[$i]['id'] ?>"><?php
+                                    echo $arr[$i]['post_title'] == "" ? "此类别还没有文章或产品" : $arr[$i]['post_title'] ?></a>
+                                <a href=""><img src="<?php
+                                    echo $urls[0] == "" ? "images/img-index-product.jpg" : $urls[0]
+                                    ?>"></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
+                        <?php
+                    }
+                    ?>
                 </div>
+                <ul class="paging">
+                    <li class="pading-btn prev"><a href="products.php?page=<?php
+                        echo $page - 1 ?>&&termNo=<?php
+                        echo $termNo ? $termNo : ""
+                        ?>">上一页</a></li>
+                    <li><a class="active" href="#"><?php echo $page ?></a></li>
+                    <li class="pading-btn next"><a href="products.php?page=<?php
+                        echo $page >= $num / 8 ? $page : $page + 1 ?>&&termNo=<?php
+                        echo $termNo ? $termNo : ""
+                        ?>">下一页</a></li>
+                </ul>
             </div>
-            <div role="tabpanel" class="tab-pane" id="profile">
-                <div class="pro-list">
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="messages">
-                <div class="pro-list">
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="settings">
-                <div class="pro-list">
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="box">
-                            <a class="pro-name" href="pro-detail.php">产品名称</a>
-                            <a href=""><img src="images/img-index-product.jpg"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>
@@ -288,7 +228,10 @@
                     </div>
                 </div>
                 <div class="info">
-                    众焱鑫公司成立于2010年是一家新兴设备制造商（大型专用设备）,和传统钣金业务服务商。
+                    <?php
+                    $spName = "优势1";
+                    require("get_special_artcles.php");
+                    ?>
                 </div>
             </div>
             <div class="col-xs-3">
@@ -300,7 +243,10 @@
                     </div>
                 </div>
                 <div class="info">
-                    众焱鑫公司成立于2010年是一家新兴设备制造商（大型专用设备）,和传统钣金业务服务商。
+                    <?php
+                    $spName = "优势2";
+                    require("get_special_artcles.php");
+                    ?>
                 </div>
             </div>
             <div class="col-xs-3">
@@ -312,7 +258,10 @@
                     </div>
                 </div>
                 <div class="info">
-                    众焱鑫公司成立于2010年是一家新兴设备制造商（大型专用设备）,和传统钣金业务服务商。
+                    <?php
+                    $spName = "优势3";
+                    require("get_special_artcles.php");
+                    ?>
                 </div>
             </div>
             <div class="col-xs-3">
@@ -324,7 +273,10 @@
                     </div>
                 </div>
                 <div class="info">
-                    众焱鑫公司成立于2010年是一家新兴设备制造商（大型专用设备）,和传统钣金业务服务商。
+                    <?php
+                    $spName = "优势4";
+                    require("get_special_artcles.php");
+                    ?>
                 </div>
             </div>
         </div>
@@ -344,16 +296,48 @@
             <div class="col-xs-6 left">
                 <div class="img-box">
                     <img src="images/img-news-left.jpg">
-                    <div class="news-title-left">
-                        <div class="text-left">
-                            <a href="article.php">文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题</a>
-                        </div>
-                        <div class="text-right">发布时间：2017-08-31</div>
-                    </div>
+                    <!-- <div class="news-title-left"> -->
+                    <!-- <div class="text-left"> -->
+                    <!-- <a href="article.php">文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题</a> -->
+                    <!-- </div> -->
+                    <!-- <div class="text-right">发布时间：2017-08-31</div> -->
+                    <!-- </div> -->
                 </div>
             </div>
             <div class="col-xs-6 right">
-                <div class="news-right">
+                <?php
+                $termNo = $_GET['termNo'];
+                if ($termNo) {
+                    $sqlStr = "SELECT * FROM posts WHERE post_status=0 AND post_mime_type=" . $termNo;
+                } else {
+                    $sqlStr = "SELECT * FROM posts WHERE post_status=0";
+                }
+                $query = $mysqli->query($sqlStr);
+                $user_arr = "";
+                while ($row = $query->fetch_object()) {
+                    $user_arr[] = $row;
+                }
+                $arr = json_decode(json_encode($user_arr, JSON_UNESCAPED_UNICODE), true);
+                for ($i = 0; $i < 3; ++$i) {
+                    if ($arr[$i]['post_title'] == "")
+                        break;
+                    ?>
+                    <div class="news-right">
+                        <img class="news-right-img" src="images/img-news-right-0<?php
+                        echo $i + 1 ?>.png">
+                        <div class="news-right-title">
+                            <a href="article.php?artId=<?php
+                            echo $arr[$i]['id'] ?>" class="title"><?php
+                                echo $arr[$i]['post_title'] ?></a>
+                            <!-- <a href="article.php?artId=<?php
+                            //echo $arr[$i]['id'] ?>" class="info"><?php
+                                //echo $arr[$i]['post_content'] ?></a> -->
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+                <!-- <div class="news-right">
                     <img class="news-right-img" src="images/img-news-right-01.png">
                     <div class="news-right-title">
                         <a href="article.php" class="title">文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题</a>
@@ -373,60 +357,13 @@
                         <a href="article.php" class="title">文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题</a>
                         <a href="article.php" class="info">文字内容文字内容文字内容文字内容文字内容文字内容文字内容</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 </div>
 <!-- /container -->
-<div class="footer">
-    <div class="footer-bar">
-        <div class="container module-center">
-            <span>友情链接：</span>
-            <?php require_once('friendlink.php');?>
-        </div>
-    </div>
-    <div class="footer-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-4">
-                    <div class="eQ-code">
-                        <div class="img-box"></div>
-                        <p>手机版</p>
-                    </div>
-                    <div class="eQ-code">
-                        <div class="img-box"></div>
-                        <p>扫一扫二维码<br>关注公众号</p>
-                    </div>
-                </div>
-                <div class="col-xs-4 contactus">
-                    <div class="title">联系我们</div>
-                    <div class="company">
-                        <div class="name">佛山市众焱鑫机械构件有限公司</div>
-                        <div class="info">
-                            <p>地址： 广东省.佛山市.顺德区.陈村镇.广隆工业区.兴业十五路四号</p>
-                            <p>电话： 0757-2381010  0757-23810505 传真：0757-23810505</p>
-                            <p>邮箱：21591XXX@qq.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-4 aftersale">
-                    <div class="title">售后服务</div>
-                    <div class="contact">
-                        <p>全国统一服务热线：<span>0757-2381-010</span></p>
-                    </div>
-                    <button class="refer">在线咨询</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <div class="container">
-            <div class="left">版权所有 © 2014-2018 佛山市众焱鑫机械构件有限公司</div>
-            <div class="right">粤ICP备170012XXX号-1 技术支持：众焱鑫机械</div>
-        </div>
-    </div>
-</div>
+<?php require_once('tail.php'); ?>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

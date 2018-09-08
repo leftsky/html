@@ -43,7 +43,9 @@
             </div>
             <div id="page-inner">
                 <iframe id="mainFrame" name="mainFrame" scrolling="no" 
-                    src="textarea.php?artcleId=<?php echo $_GET['artcleId']?>"
+                    src="textarea<?php
+                        echo $_GET['thing']?>.php?artcleId=<?php 
+                        echo $_GET['artcleId']?>"
                     frameborder="0" style="padding: 0px; width: 100%; height: 5000px;"></iframe>
             </div>
             <!-- /. PAGE INNER  -->

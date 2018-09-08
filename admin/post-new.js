@@ -9,9 +9,10 @@ function post_new(id) {
     console.log(artStr2)
     post_author = document.getElementById('post_author').value
     post_title = document.getElementById('post_title').value
-    post_mime_type = document.getElementById('termTag').value
+    post_mime_type = document.getElementById('termTag') 
+                ? document.getElementById('termTag').value : ""
 
-    if (post_author == "" || post_title == "" || post_mime_type == "") {
+    if (post_author == "" || post_title == "") {
         alert("请补全信息")
     }
 
@@ -56,15 +57,16 @@ function post_new(id) {
 }
 
 
-function update_post(id, artId) {
+function update_post(id, artId, artTypeNo) {
 
     artStr = $('#' + id).val()
     artStr2 = $('#' + id + '2').val()
     post_author = document.getElementById('post_author').value
     post_title = document.getElementById('post_title').value
-    post_mime_type = document.getElementById('termTag').value
+    post_mime_type = document.getElementById('termTag') 
+                ? document.getElementById('termTag').value : artTypeNo
 
-    if (post_author == "" || post_title == "" || post_mime_type == "") {
+    if (post_author == "" || post_title == "") {
         alert("请补全信息")
     }
 
@@ -119,7 +121,7 @@ function getSelect(showDivId, defaultName, defaultValue) {
             var j = JSON.parse(data)
             var c = 0
             for (var i in j) {
-                if (j[i].tagFatherId == "0" || j[i].tagFatherId == "-1") {
+                if (j[i].tagFatherId == "0") {
                     var kfirst = 0
                     for (var k in j) {
                         if (j[k].tagFatherId == j[i].id) {

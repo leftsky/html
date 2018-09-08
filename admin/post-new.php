@@ -71,16 +71,6 @@
     <!-- Custom Js -->
     <script src="assets/js/custom-scripts.js"></script>
 
-    <script>
-
-
-
-
-
-
-
-    </script>
-
 </body>
 
 </html>

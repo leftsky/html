@@ -13,7 +13,7 @@ if ($term == null) {
     <?php
 }
 
-switch($term) {
+switch ($term) {
     case 2:
         $artcleName = "产品";
         break;
@@ -63,13 +63,13 @@ $num = count($arr);
 <div id="page-wrapper">
     <div class="header">
         <h1 class="page-header">
-            所有文章
+            所有<?php echo $artcleName ?>
             <small>开始编辑吧！</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
             <li><a href="#">文章</a></li>
-            <li class="active">所有文章</li>
+            <li class="active">所有<?php echo $artcleName ?></li>
         </ol>
 
     </div>
@@ -79,7 +79,7 @@ $num = count($arr);
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        现有的所有<?php echo $artcleName?>
+                        现有的所有<?php echo $artcleName ?>
                     </div>
                     <div class="panel-body">
                         <div class="table-responsive">
@@ -91,13 +91,20 @@ $num = count($arr);
                                         <th>题目</th>
                                         <th>查看</th>
                                         <th>编辑</th>
-                                        <th>删除</th>
+                                        <?php
+                                        if ($term != -1) {
+                                            ?>
+                                            <th>删除</th>
+                                            <?php
+                                        }
+                                        ?>
+
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <?php
                                     for ($i = 0; $i < $num; ++$i) {
-                                        if($num == 1 || $num == 1)
+                                        if ($num == 1 || $num == 1)
                                             break;
                                         ?>
                                         <tr>
@@ -106,9 +113,16 @@ $num = count($arr);
                                             <td><a href="readArtcle.php?artcleId=<?php
                                                 echo $arr[$i]['id'] ?>" )>查看</a></td>
                                             <td><a href="update-post.php?artcleId=<?php
-                                                echo $arr[$i]['id'] ?>" )>编辑</a></td>
-                                            <td><a href="javascript:delArtcleById(<?php
-                                                echo $arr[$i]['id'] ?>,'tagsShow')" )>删除</a></td>
+                                                echo $arr[$i]['id'] ?>&&thing=<?php
+                                                echo $term == 2 ? "-thing" : ""?>" )>编辑</a></td>
+                                            <?php
+                                            if ($term != -1) {
+                                                ?>
+                                                <td><a href="javascript:delArtcleById(<?php
+                                                    echo $arr[$i]['id'] ?>,'tagsShow')" )>删除</a></td>
+                                                <?php
+                                            }
+                                            ?>
                                         </tr>
                                         <?php
                                     }

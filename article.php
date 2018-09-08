@@ -66,7 +66,6 @@
             <div class="article-box">
                 <?php 
                     $artId = $_GET['artId'];
-                    // echo $artId;
                     require("./admin/readArtcle.php");
                 ?>
                 <!-- <div class="article-header">
@@ -80,70 +79,23 @@
                     电焊机使用过程中不允许超载，否则将会因过热而烧毁电焊机或造成火灾；超载造成绝缘损坏，还可能引起漏电而发生触电事故 ...些状况的出现电焊机使用过程中不允许超载，否则将会因过热而烧毁电焊机或造成火灾；超载造成绝缘损坏，还可能引起漏电而发生触电事故 ...些状况的出现电焊机使用过程中不允许超载，否则将会因过热而烧毁电焊机或造成火灾；超载造成绝缘损坏，还可能引起漏电而发生触电事故 ...些状况的出现
                 </div> -->
             </div>
-            <!-- <div class="article-bar">
+            <div class="article-bar">
                 <div class="page-btn prev">
-                    <span>上一篇</span>
-                    <a href="">电焊机使用过程中不允许超载，否则将会因过热而烧毁电</a>
+                    <span>x</span>
+                    <a href=""></a>
                 </div>
                 <div class="page-btn center">
-                    <a href="news.php">新闻</a>
+                    <a href="news.php">返回新闻首页</a>
                 </div>
                 <div class="page-btn next">
-                    <span>下一篇</span>
-                    <a href="">电焊机使用过程中不允许超载，否则将会因过热而烧毁电</a>
+                    <span>x</span>
+                    <a href=""></a>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
     <!-- /container -->
-    <div class="footer">
-        <div class="footer-bar">
-            <div class="container module-center">
-                <span>友情链接：</span>
-                <?php require_once('friendlink.php');?>
-            </div>
-        </div>
-        <div class="footer-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <div class="eQ-code">
-                            <div class="img-box"></div>
-                            <p>手机版</p>
-                        </div>
-                        <div class="eQ-code">
-                            <div class="img-box"></div>
-                            <p>扫一扫二维码<br>关注公众号</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-4 contactus">
-                        <div class="title">联系我们</div>
-                        <div class="company">
-                            <div class="name">佛山市众焱鑫机械构件有限公司</div>
-                            <div class="info">
-                            <p>地址： 广东省.佛山市.顺德区.陈村镇.广隆工业区.兴业十五路四号</p>
-                            <p>电话： 0757-2381010    0757-23810505   传真：0757-23810505</p>
-                            <p>邮箱：21591XXX@qq.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4 aftersale">
-                        <div class="title">售后服务</div>
-                        <div class="contact">
-                            <p>全国统一服务热线：<span>0757-2381-010</span></p>
-                        </div>
-                        <button class="refer">在线咨询</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <div class="container">
-                <div class="left">版权所有 © 2014-2018 佛山市众焱鑫机械构件有限公司</div>
-                <div class="right">粤ICP备170012XXX号-1 技术支持：众焱鑫机械</div>
-            </div>
-        </div>
-    </div>
+    <?php require_once('tail.php');?>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="003de722-82f5-4aba-8606-97aae11812ac" name="Default Changelist" comment="" />
+    <list default="true" id="003de722-82f5-4aba-8606-97aae11812ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aboutus.php" beforeDir="false" afterPath="$PROJECT_DIR$/aboutus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/allArtcles.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/allArtcles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/link-mysql.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/link-mysql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/my-.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/post-new.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/post-new.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/post-new.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/post-new.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/readArtcle.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/readArtcle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/textarea-thing.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/textarea-thing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/textarea.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/textarea.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/update-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/update-post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article.php" beforeDir="false" afterPath="$PROJECT_DIR$/article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_special_artcles.php" beforeDir="false" afterPath="$PROJECT_DIR$/get_special_artcles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/pro-detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/products.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +50,13 @@
       <usages-collector id="statistics.php.new.test" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="7" />
+          <entry key="php" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.actions" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="7" />
+          <entry key="PHP" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class" />
@@ -47,17 +67,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1444">
-              <caret line="76" column="55" selection-start-line="76" selection-start-column="55" selection-end-line="76" selection-end-column="55" />
+            <state relative-caret-position="531">
+              <caret line="57" column="52" lean-forward="true" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products.php">
+        <entry file="file://$PROJECT_DIR$/pro-detail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            <state relative-caret-position="418">
+              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/article.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -83,17 +112,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/textarea-thing.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            <state relative-caret-position="494">
+              <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tail.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/textarea.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+            <state relative-caret-position="342">
+              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -107,28 +150,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/allArtcles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+            <state relative-caret-position="437">
+              <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/products.php" />
         <option value="$PROJECT_DIR$/aboutus.php" />
         <option value="$PROJECT_DIR$/admin/upload_image.php" />
-        <option value="$PROJECT_DIR$/admin/textarea-thing.php" />
         <option value="$PROJECT_DIR$/admin/textarea.php" />
         <option value="$PROJECT_DIR$/news.php" />
         <option value="$PROJECT_DIR$/admin/allArtcles.php" />
+        <option value="$PROJECT_DIR$/admin/textarea-thing.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/pro-detail.php" />
+        <option value="$PROJECT_DIR$/article.php" />
       </list>
     </option>
   </component>
@@ -152,6 +200,7 @@
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -206,12 +255,12 @@
       <updated>1536229651905</updated>
       <workItem from="1536229655504" duration="4694000" />
       <workItem from="1536249772395" duration="660000" />
-      <workItem from="1536311854487" duration="927000" />
+      <workItem from="1536311854487" duration="3752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6281000" />
+    <option name="totallyTimeSpent" value="9106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-8" width="1873" height="1096" extended-state="6" />
@@ -229,7 +278,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -245,13 +294,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1444">
-          <caret line="76" column="55" selection-start-line="76" selection-start-column="55" selection-end-line="76" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/products.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
@@ -273,17 +315,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/textarea-thing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/textarea.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        <state relative-caret-position="342">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -296,8 +331,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/allArtcles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+        <state relative-caret-position="437">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/textarea-thing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tail.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="57" column="52" lean-forward="true" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
         </state>
       </provider>
     </entry>
