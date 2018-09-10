@@ -44,6 +44,7 @@ for ($i = 0; $i < $num; ++$i) {
         <li><a href="aboutus.php#0">公司简介</a></li>
         <li><a href="aboutus.php#1">公司文化</a></li>
         <li><a href="aboutus.php#2">战略愿景</a></li>
+        <li><a href="news.php">新闻</a></li>
         <li><a href="aboutus.php#3">联系我们</a></li>
         <li><a href="aboutus.php#4">加入我们</a></li>
         <li><a href="aboutus.php#5">在线留言</a></li>

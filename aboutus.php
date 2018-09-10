@@ -294,10 +294,11 @@
                         </div>
                     </div>
                 </div>
+                <br/>
                 <ul class="paging">
-                    <li class="pading-btn prev"><a href="">上一页</a></li>
-                    <li><a class="active" href="">1</a></li>
-                    <li class="pading-btn next"><a href="">下一页</a></li>
+                    <!-- <li class="pading-btn prev"><a href="">.</a></li>
+                    <li><a class="active" href="">.</a></li>
+                    <li class="pading-btn next"><a href="">.</a></li> -->
                 </ul>
             </div>
             <div role="tabpanel" class="tab-pane" id="letter">

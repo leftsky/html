@@ -123,7 +123,7 @@
                                         <div class="info"><a
                                                     href="article.php?artId=<?php
                                                     echo $arr[$i]['id'] ?>"><?php
-                                                echo $arr[$i]['post_content'] ?></a></div>
+                                                echo $arr[$i]['post_date'] ?></a></div>
                                     </div>
                                 </li>
                             </ul>

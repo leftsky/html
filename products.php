@@ -117,7 +117,7 @@
                                 <a class="pro-name" href="pro-detail.php?id=<?php
                                 echo $arr[$i]['id'] ?>"><?php
                                     echo $arr[$i]['post_title'] == "" ? "此类别还没有文章或产品" : $arr[$i]['post_title'] ?></a>
-                                <a href=""><img src="<?php
+                                <a href=""><img style="width: 287px; height: 287px"  src="<?php
                                     echo $urls[0] == "" ? "images/img-index-product.jpg" : $urls[0]
                                     ?>"></a>
                             </div>

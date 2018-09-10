@@ -12,11 +12,13 @@
                     <!-- <div class="eQ-code">
                         <div class="img-box"></div>
                         <p>手机版</p>
-                    </div>
-                    <div class="eQ-code">
-                        <div class="img-box"></div>
-                        <p>扫一扫二维码<br>关注公众号</p>
                     </div> -->
+                    <div class="eQ-code">
+                        <div class="img-box">
+                            <img src="http://huadong.leftsky.top:1991/html/admin/images/8329ce93efac638cc753f7803a2d4dde82ed8c5a.jpg">
+                        </div>
+                        <p>扫一扫二维码<br>关注公众号</p>
+                    </div>
                 </div>
                 <div class="col-xs-4 contactus">
                     <div class="title">联系我们</div>
@@ -54,7 +56,7 @@
     <div class="copyright">
         <div class="container">
             <div class="left">版权所有 © 2014-2018 佛山市众焱鑫机械构件有限公司</div>
-            <div class="right">粤ICP备170012XXX号-1 技术支持：众焱鑫机械</div>
+            <div class="right">粤ICP备18109321 技术支持：广州美业美程网络科技有限公司</div>
         </div>
     </div>
 </div>
