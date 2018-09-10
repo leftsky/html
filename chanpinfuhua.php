@@ -69,19 +69,19 @@
                     require("get_special_artcles.php");
                 ?>
             </div>
-            <div class="article-bar">
+            <!-- <div class="article-bar">
                 <div class="page-btn prev">
-                    <span>x</span>
-                    <a href=""></a>
+                    <span></span>
+                    <a href="">.</a>
                 </div>
                 <div class="page-btn center">
                     <a href="news.php">返回新闻首页</a>
                 </div>
                 <div class="page-btn next">
-                    <span>x</span>
-                    <a href=""></a>
+                    <span></span>
+                    <a href="">.</a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- /container -->
