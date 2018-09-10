@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Note there is no responsive meta tag here -->
-    <title>ZYX</title>
+    <title>佛山市众焱鑫机械构件有限公司</title>
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="swiper/dist/css/swiper.min.css" rel="stylesheet">

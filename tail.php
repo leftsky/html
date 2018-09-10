@@ -23,7 +23,7 @@
                 <div class="col-xs-4 contactus">
                     <div class="title">联系我们</div>
                     <div class="company">
-                        <div class="name">佛山市众焱鑫机械构件有限公司</div>
+                        <div class="name">佛山市顺德区众焱鑫机械构件有限公司</div>
                         <div class="info">
                             <p>地址： <?php
                                 $spName = "公司地址";

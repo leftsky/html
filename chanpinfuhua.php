@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Note there is no responsive meta tag here -->
-    <title>ZYX</title>
+    <title>佛山市众焱鑫机械构件有限公司</title>
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -65,7 +65,7 @@
         <div class="container">
             <div class="article-box">
                 <?php 
-                    $spName = "产品孵化文章";
+                    $spName = "产业孵化文章";
                     require("get_special_artcles.php");
                 ?>
             </div>

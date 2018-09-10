@@ -36,7 +36,7 @@ for ($i = 0; $i < $num; ++$i) {
 ?>
 
 <li class="first">
-    <a href="chanpinfuhua.php">产品孵化</a>
+    <a href="chanpinfuhua.php">产业孵化</a>
 </li>
 <li class="first">
     <a href="aboutus.php">关于我们</a>
