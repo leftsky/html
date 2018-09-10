@@ -192,17 +192,17 @@
                     }
                     ?>
                 </div>
-                <ul class="paging">
+                <!-- <ul class="paging">
                     <li class="pading-btn prev"><a href="products.php?page=<?php
-                        echo $page - 1 ?>&&termNo=<?php
-                        echo $termNo ? $termNo : ""
+                        //echo $page - 1 ?>&&termNo=<?php
+                        //echo $termNo ? $termNo : ""
                         ?>">上一页</a></li>
-                    <li><a class="active" href="#"><?php echo $page ?></a></li>
+                    <li><a class="active" href="#"><?php //echo $page ?></a></li>
                     <li class="pading-btn next"><a href="products.php?page=<?php
-                        echo $page >= $num / 8 ? $page : $page + 1 ?>&&termNo=<?php
-                        echo $termNo ? $termNo : ""
+                        //echo $page >= $num / 8 ? $page : $page + 1 ?>&&termNo=<?php
+                        //echo $termNo ? $termNo : ""
                         ?>">下一页</a></li>
-                </ul>
+                </ul> -->
             </div>
 
         </div>

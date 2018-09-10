@@ -108,14 +108,14 @@
                     $arr = json_decode(json_encode($user_arr, JSON_UNESCAPED_UNICODE), true);
                     $num = count($arr);
                     for ($i = ($page - 1) * 8; $i < $num && $i < $page * 8; ++$i) {
-                        if($arr[$i]['post_title'] == "")
+                        if ($arr[$i]['post_title'] == "")
                             break;
                         $urls = explode(";", $arr[$i]['post_main_url']);
                         ?>
                         <div class="item">
                             <div class="box">
-                                <a class="pro-name" href="pro-detail.php?id=<?php 
-                                    echo $arr[$i]['id']?>"><?php
+                                <a class="pro-name" href="pro-detail.php?id=<?php
+                                echo $arr[$i]['id'] ?>"><?php
                                     echo $arr[$i]['post_title'] == "" ? "此类别还没有文章或产品" : $arr[$i]['post_title'] ?></a>
                                 <a href=""><img src="<?php
                                     echo $urls[0] == "" ? "images/img-index-product.jpg" : $urls[0]
@@ -127,22 +127,32 @@
                     ?>
                 </div>
                 <ul class="paging">
-                    <li class="pading-btn prev"><a href="products.php?page=<?php
-                        echo $page - 1 ?>&&termNo=<?php
-                        echo $termNo ? $termNo : ""
-                        ?>">上一页</a></li>
+                    <?php if ($page > 1) {
+                        ?>
+                        <li class="pading-btn prev"><a href="products.php?page=<?php
+                            echo $page - 1 ?>&&termNo=<?php
+                            echo $termNo ? $termNo : ""
+                            ?>">上一页</a></li>
+                        <?php
+                    }
+                    ?>
                     <li><a class="active" href="#"><?php echo $page ?></a></li>
-                    <li class="pading-btn next"><a href="products.php?page=<?php
-                        echo $page >= $num / 8 ? $page : $page + 1 ?>&&termNo=<?php
-                        echo $termNo ? $termNo : ""
-                        ?>">下一页</a></li>
+                    <?php if ($page < $num / 8) {
+                        ?>
+                        <li class="pading-btn next"><a href="products.php?page=<?php
+                            echo $page >= $num / 8 ? $page : $page + 1 ?>&&termNo=<?php
+                            echo $termNo ? $termNo : ""
+                            ?>">下一页</a></li>
+                        <?php
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
     </div>
 </div>
 <!-- /container -->
-<?php require_once('tail.php');?>
+<?php require_once('tail.php'); ?>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
