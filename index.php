@@ -81,19 +81,18 @@
     <div class="container module-center">
         <div class="page-header">
             <h1>
-                <span class="zch">众焱鑫机械<strong>关于我们</strong></span>
+                <span class="zch"><strong>关于我们</strong></span>
                 <span class="eng letter-spacing5 opacity1">ABOUTUS</span>
             </h1>
             <p class="lead">所谓“精诚所致，金石为开”，众焱鑫机械要“诚+信”，讲究的是诚实为本，言行一致 </p>
         </div>
         <div class="row">
             <div class="col-xs-6 about-info">
-                <p>- 众焱鑫公司成立于2010年。是一家新兴设备制造商（大型专用设备）,和传统钣金业务服务商。</p>
-                <p>-
-                    众焱鑫公司，是以人为中心进行管理，以人为出发点，培育共同价值观，调动人的自觉性和积极性，主动性和创造性，最大程度地挖掘人的潜力。为寻求企业的长久持续发展，提高企业的管理水平和竞争能力，企业管理需求为逐步推进企业流程管理，制度规范和文化建设、建立企业核心价值观，实施并落实企业管理文化,凝聚认同企业愿景、使命、精神与价值观的各方人才，为企业的发展诚心与共！</p>
-
-                <p class="last">- 是做人之本，更是企业成功之本。所谓“精诚所致，金石为开”，众焱鑫机械要“诚+信”，讲究的是诚实为本，言行一致...</p>
-
+                
+                <?php
+                        $spName = "公司简介";
+                        require("get_special_artcles.php");
+                        ?>
                 <div class="row clum">
                     <div class="col-xs-3">
                         <div class="box">
@@ -134,7 +133,7 @@
 <div class="index-module module-three">
     <div class="page-header">
         <h1>
-            <span class="zch">众焱鑫机械<strong>产品中心</strong></span>
+            <span class="zch"><strong>产品中心</strong></span>
             <span class="eng opacity5">PRODUCTS</span>
         </h1>
         <p class="lead">所谓“精诚所致，金石为开”，众焱鑫机械要“诚+信”，讲究的是诚实为本，言行一致 </p>
@@ -285,7 +284,7 @@
 <div class="index-module module-five">
     <div class="page-header">
         <h1>
-            <span class="zch">众焱鑫机械<strong>新闻资讯</strong></span>
+            <span class="zch"><strong>新闻资讯</strong></span>
             <span class="eng opacity1">NEWS</span>
         </h1>
         <p class="lead">所谓“精诚所致，金石为开”，众焱鑫机械要“诚+信”，讲究的是诚实为本，言行一致 </p>

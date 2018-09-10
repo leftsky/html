@@ -164,6 +164,7 @@
                 . "post_date='" . date("Y-m-d H:i:s") . "',"
                 . "post_main_url='" . $postJ['main_url'] . "',"
                 . "post_content='" . $postJ['post_content'] . "',"
+                . "post_excerpt='" . $postJ['post_excerpt'] . "',"
                 . "post_title='" . $postJ['post_title'] . "',"
                 . "post_mime_type='" . $postJ['post_mime_type'] . "' "
                 . " WHERE id=" . $postJ['artId'];

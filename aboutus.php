@@ -124,9 +124,9 @@
     <div class="container index-products child-products">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class=""><a href="#home" aria-controls="home" role="tab" data-toggle="tab">公司简介</a>
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">公司简介</a>
             </li>
-            <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab"
+            <li role="presentation" class=""><a href="#profile" aria-controls="profile" role="tab"
                                                       data-toggle="tab">公司文化</a></li>
             <li role="presentation" class=""><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">战略愿景</a>
             </li>

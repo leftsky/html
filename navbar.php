@@ -16,7 +16,7 @@ for ($i = 0; $i < $num; ++$i) {
     if ($arr[$i]['tagFatherId'] == 0) {
         ?>
         <li class="first">
-            <a href="products.php"><?php echo $arr[$i]['tagName'] ?></a>
+            <a href="#"><?php echo $arr[$i]['tagName'] ?></a>
             <ul class="second">
                 <?php
                 for ($k = 0; $k < $num; ++$k) {

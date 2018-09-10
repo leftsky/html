@@ -60,7 +60,10 @@ function post_new(id) {
 function update_post(id, artId, artTypeNo) {
 
     artStr = $('#' + id).val()
-    artStr2 = $('#' + id + '2').val()
+    var artStr2 = ""
+    if(document.getElementById(id + '2') != null) {
+        artStr2 = $('#' + id + '2').val()
+    }
     post_author = document.getElementById('post_author').value
     post_title = document.getElementById('post_title').value
     main_url = urls
@@ -77,6 +80,7 @@ function update_post(id, artId, artTypeNo) {
         post_author: post_author,
         post_date: '',
         post_content: artStr,
+        post_excerpt: artStr2,
         post_title: post_title,
         post_mime_type: post_mime_type
     }

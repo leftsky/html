@@ -9,14 +9,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-4">
-                    <div class="eQ-code">
+                    <!-- <div class="eQ-code">
                         <div class="img-box"></div>
                         <p>手机版</p>
                     </div>
                     <div class="eQ-code">
                         <div class="img-box"></div>
                         <p>扫一扫二维码<br>关注公众号</p>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-xs-4 contactus">
                     <div class="title">联系我们</div>
@@ -46,7 +46,7 @@
                                 require("get_special_artcles.php");
                                 ?></span></p>
                     </div>
-                    <button class="refer">在线咨询</button>
+                    <!-- <button class="refer">在线咨询</button> -->
                 </div>
             </div>
         </div>

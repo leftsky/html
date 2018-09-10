@@ -15,8 +15,8 @@ if ($id) {
     $query = $mysqli->query($sqlStr);
     $arr = $query->fetch_array();
     // echo $arr['post_content'];
-    $artContent = $arr['post_content'];
-    $artContent2 = $arr['post_excerpt'];
+    $artContent2 = $arr['post_content'];
+    $artContent = $arr['post_excerpt'];
     $artAuthor = $arr['post_author'];
     $artTitle = $arr['post_title'];
     $artUrl = $arr['post_main_url'];

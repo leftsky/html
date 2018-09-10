@@ -1,9 +1,9 @@
 <nav class='navbar-default navbar-side' role='navigation'>
     <div class='sidebar-collapse'>
         <ul class='nav' id='main-menu'>
-            <li>
+            <!-- <li>
                 <a class='active-menu' href='index.php'><i class='fa fa-dashboard'></i>仪表盘</a>
-            </li>
+            </li> -->
             <li><a href='#'><i class='fa fa-desktop'></i>文章<span class='fa arrow'></span></a>
                 <ul class='nav nav-second-level'>
                     <li><a href='allArtcles.php?term=0'>所有文章</a></li>
