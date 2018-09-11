@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Note there is no responsive meta tag here -->
-    <title>佛山市众焱鑫机械构件有限公司</title>
+    <title>ZYX</title>
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -79,19 +79,19 @@
                     电焊机使用过程中不允许超载，否则将会因过热而烧毁电焊机或造成火灾；超载造成绝缘损坏，还可能引起漏电而发生触电事故 ...些状况的出现电焊机使用过程中不允许超载，否则将会因过热而烧毁电焊机或造成火灾；超载造成绝缘损坏，还可能引起漏电而发生触电事故 ...些状况的出现电焊机使用过程中不允许超载，否则将会因过热而烧毁电焊机或造成火灾；超载造成绝缘损坏，还可能引起漏电而发生触电事故 ...些状况的出现
                 </div> -->
             </div>
-            <!-- <div class="article-bar">
+            <div class="article-bar">
                 <div class="page-btn prev">
                     <span></span>
-                    <a href="">.</a>
+                    <a href="#">.</a>
                 </div>
-                <div class="page-btn center">
-                    <a href="news.php">返回新闻首页</a>
+                <div class="page-btn center" style="float: center">
+                    <a href="news.php" style="vertical-align:middle" >返回新闻首页</a>
                 </div>
                 <div class="page-btn next">
                     <span></span>
-                    <a href="">.</a>
+                    <a href="#">.</a>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
     <!-- /container -->

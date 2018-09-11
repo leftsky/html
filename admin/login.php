@@ -48,11 +48,11 @@
 			</form>
 		</div>
 		<div class="login-bottom">
-			<h3>left.sky1991@gmail.com</h3>
+			<h3>广州美业美程网络科技有限公司</h3>
 		</div>
 	</div>
 	<div class="copyright">
-		<p>copyright (c) left</p>
+		<p>copyright (c) 广州美业美程网络科技有限公司</p>
 	</div>
 
 

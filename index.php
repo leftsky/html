@@ -72,9 +72,9 @@
         <div class="item active">
             <img src="images/img-banner.png" alt="...">
         </div>
-        <div class="item">
+        <!-- <div class="item">
             <img src="images/img-banner.png" alt="...">
-        </div>
+        </div> -->
     </div>
 </div>
 <div class="index-module bg-module">
